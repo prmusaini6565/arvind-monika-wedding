@@ -3,9 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Wedding Invitation | Arvind Weds Monika</title>
 
-<!-- Fancy Wedding Fonts -->
+<!-- WhatsApp / Facebook Wedding Preview -->
+<meta property="og:title" content="Wedding Invitation | Arvind Weds Monika">
+<meta property="og:description" content="With great pleasure, we invite you to celebrate the wedding of Arvind & Monika on 13 February 2026 at Mandawa, Jhunjhunu.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://prmusaini6565.github.io/arvind-monika-wedding/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
+
+<!-- Wedding Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -16,18 +24,43 @@ body{
     color:#6b1b1b;
     text-align:center;
 }
+
+/* Card Container */
 .container{
-    padding:30px 15px;
+    padding:32px 18px;
+    max-width:680px;
+    margin:24px auto;
+    background:#fffaf7;
+    border-radius:26px;
+    border:2px solid #e0b973;
+    box-shadow:0 18px 40px rgba(0,0,0,0.18);
 }
+
+/* Invitation Header */
+.card-header{
+    margin-bottom:20px;
+}
+.ganesha{
+    font-size:20px;
+    margin-bottom:6px;
+}
+.invite-line{
+    font-size:15px;
+    letter-spacing:1px;
+}
+
+/* Titles */
 h1{
     font-family:'Dancing Script', cursive;
-    font-size:42px;
-    margin-bottom:6px;
+    font-size:44px;
+    margin:12px 0 6px;
 }
 h2{
     font-size:26px;
     margin:10px 0;
 }
+
+/* Heart with WEDS */
 .heart-weds{
     position:relative;
     display:inline-block;
@@ -44,29 +77,29 @@ h2{
     font-weight:bold;
     color:#fff;
 }
+
+/* Date & Quote */
 .date{
     font-weight:bold;
     margin-top:6px;
     font-size:18px;
 }
-
-/* Romantic Quote */
 .quote{
     margin:18px auto 10px;
     font-size:18px;
     font-style:italic;
-    max-width:500px;
+    max-width:520px;
     line-height:1.5;
 }
 
 /* Sections */
 .section{
     background:#ffffff;
-    max-width:520px;
-    margin:20px auto;
+    max-width:560px;
+    margin:22px auto;
     padding:22px;
-    border-radius:18px;
-    box-shadow:0 8px 22px rgba(0,0,0,0.12);
+    border-radius:20px;
+    box-shadow:0 10px 26px rgba(0,0,0,0.12);
 }
 .section h3{
     margin-top:0;
@@ -74,7 +107,7 @@ h2{
 .event{
     margin:12px 0;
     font-size:16px;
-    line-height:1.4;
+    line-height:1.5;
 }
 .countdown{
     font-size:18px;
@@ -85,7 +118,7 @@ button{
     background:#8b0000;
     color:#fff;
     border:none;
-    padding:12px 24px;
+    padding:12px 26px;
     border-radius:30px;
     font-size:15px;
     cursor:pointer;
@@ -93,8 +126,10 @@ button{
 button:hover{
     background:#5b0000;
 }
+
+/* Footer */
 .footer{
-    margin-top:25px;
+    margin-top:28px;
     font-size:14px;
 }
 </style>
@@ -102,14 +137,20 @@ button:hover{
 
 <body>
 
-<!-- Background Music -->
+<!-- Soft Background Music -->
 <audio autoplay loop>
   <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_f8bfa82c9c.mp3" type="audio/mpeg">
 </audio>
 
 <div class="container">
 
-<h1>🌸 Wedding Invitation 🌸</h1>
+<!-- Card Opening -->
+<div class="card-header">
+  <div class="ganesha">ॐ श्री गणेशाय नमः</div>
+  <div class="invite-line">With the blessings of our families</div>
+</div>
+
+<h1>Wedding Invitation</h1>
 
 <h2>
 Arvind
@@ -140,13 +181,11 @@ a lifetime together”
 <!-- Events -->
 <div class="section">
 <h3>✨ Wedding Events ✨</h3>
-
 <div class="event">🟡 <b>Haldi</b><br>11 Feb 2026 – 9:15 AM</div>
 <div class="event">🟣 <b>Tilak</b><br>11 Feb 2026 – 11:15 AM</div>
 <div class="event">🍽️ <b>Partibhoj</b><br>11 Feb 2026 – 7:15 PM</div>
 <div class="event">🎶 <b>Sangeet</b><br>12 Feb 2026 – 7:15 PM</div>
 <div class="event">💍 <b>Subh Vivah</b><br>13 Feb 2026 – Subh Mahurat Anusar</div>
-
 </div>
 
 <!-- Invitation Message -->
@@ -162,25 +201,22 @@ hardik nimantran hai.
 
 <div class="footer">
 With Love ❤️<br>
-<b>Samast Mitawa Parivaar</b>
+<b>Samast Parivaar</b>
 </div>
 
 </div>
 
 <script>
 const weddingDate = new Date("Feb 13, 2026 00:00:00").getTime();
-
 setInterval(() => {
   const now = new Date().getTime();
   const diff = weddingDate - now;
-
   const d = Math.floor(diff / (1000 * 60 * 60 * 24));
   const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   const s = Math.floor((diff % (1000 * 60)) / 1000);
-
   document.getElementById("countdown").innerHTML =
-    d + " Days " + h + " Hours " + m + " Minutes " + s + " Seconds";
+    d+" Days "+h+" Hours "+m+" Minutes "+s+" Seconds";
 }, 1000);
 
 function openMap(){
