@@ -11,12 +11,12 @@
 <meta property="og:description" content="We joyfully invite you to celebrate the wedding of Arvind & Monika on 13 February 2026 at Mandawa, Jhunjhunu.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://prmusaini6565.github.io/arvind-monika-wedding/">
-<meta property="og:image" content="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+<meta property="og:image" content="wedding-cover.png">
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 
-<!-- QR Code Library -->
+<!-- QR Code -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 <style>
@@ -32,15 +32,13 @@ body{
 /* Flower animation */
 .flower{
     position:fixed;
-    top:-50px;
+    top:-40px;
     font-size:22px;
     animation:fall linear infinite;
+    z-index:1;
 }
 @keyframes fall{
-    to{
-        transform:translateY(110vh) rotate(360deg);
-        opacity:0;
-    }
+    to{ transform:translateY(110vh) rotate(360deg); opacity:0; }
 }
 
 /* Card */
@@ -56,40 +54,46 @@ body{
     z-index:5;
 }
 
-/* Cover Photo */
-.cover img{
+/* Cover Illustration */
+.cover-art{
+    position:relative;
+    margin-bottom:24px;
+}
+.cover-art img{
     width:100%;
     border-radius:22px;
-    margin-bottom:20px;
+    border:2px solid #e0b973;
+}
+.cover-text{
+    position:absolute;
+    bottom:20px;
+    left:0;
+    right:0;
+    text-align:center;
+}
+.cover-names{
+    background:rgba(255,255,255,0.9);
+    display:inline-block;
+    padding:12px 24px;
+    border-radius:30px;
+    font-size:24px;
+    font-weight:bold;
+}
+.cover-names span{
+    color:#c2185b;
+    font-size:14px;
+    margin:0 6px;
 }
 
 /* Header */
 .ganesha{ font-size:20px; margin-bottom:6px; }
 .invite-line{ font-size:15px; letter-spacing:1px; }
 
-/* Titles */
 h1{
     font-family:'Dancing Script', cursive;
     font-size:44px;
 }
 h2{ font-size:26px; }
-
-.heart-weds{
-    position:relative;
-    display:inline-block;
-    color:#d81b60;
-    font-size:34px;
-    margin:0 8px;
-}
-.weds-text{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-55%);
-    font-size:10px;
-    font-weight:bold;
-    color:#fff;
-}
 
 .date{ font-weight:bold; font-size:18px; }
 .quote{
@@ -123,36 +127,42 @@ button:hover{ background:#5b0000; }
 
 .whatsapp{
     background:#25D366;
-    margin-top:10px;
 }
+
 .footer{ margin-top:28px; font-size:14px; }
 </style>
 </head>
 
 <body>
 
-<!-- 🌸 Flowers -->
+<!-- 🌸 Flower Animation -->
 <script>
-for(let i=0;i<25;i++){
+for(let i=0;i<30;i++){
   let f=document.createElement("div");
   f.className="flower";
   f.innerHTML="🌸";
   f.style.left=Math.random()*100+"vw";
-  f.style.animationDuration=(5+Math.random()*5)+"s";
+  f.style.animationDuration=(5+Math.random()*6)+"s";
   document.body.appendChild(f);
 }
 </script>
 
-<!-- Music -->
+<!-- Background Music -->
 <audio autoplay loop>
   <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_f8bfa82c9c.mp3" type="audio/mpeg">
 </audio>
 
 <div class="container">
 
-<!-- 📸 Cover Photo -->
-<div class="cover">
-<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Couple">
+<!-- 🎨 Illustrated Wedding Cover -->
+<div class="cover-art">
+  <!-- Upload your illustration image in repo as: wedding-cover.png -->
+  <img src="wedding-cover.png" alt="Wedding Illustration">
+  <div class="cover-text">
+    <div class="cover-names">
+      Arvind <span>WEDS</span> Monika
+    </div>
+  </div>
 </div>
 
 <div class="ganesha">ॐ श्री गणेशाय नमः</div>
@@ -160,15 +170,12 @@ for(let i=0;i<25;i++){
 
 <h1>Wedding Invitation</h1>
 
-<h2>
-Arvind
-<span class="heart-weds">❤<span class="weds-text">WEDS</span></span>
-Monika
-</h2>
-
 <div class="date">13 February 2026</div>
 
-<div class="quote">“Two hearts, one journey, a lifetime together”</div>
+<div class="quote">
+“Two hearts, one journey,<br>
+a lifetime together”
+</div>
 
 <div class="section">
 <h3>📍 Venue</h3>
@@ -191,12 +198,13 @@ Monika
 </div>
 
 <div class="section">
-<h3>📷 QR Code (Scan Invitation)</h3>
+<h3>📷 Scan Invitation</h3>
 <div id="qrcode"></div>
 </div>
 
 <div class="footer">
-With Love ❤️<br><b>Samast Mitawa Parivaar</b>
+With Love ❤️<br>
+<b>Samast Mitawa Parivaar</b>
 </div>
 
 </div>
@@ -206,7 +214,10 @@ function openMap(){
   window.open("https://www.google.com/maps/search/Mandawa+Jhunjhunu","_blank");
 }
 function shareWhatsApp(){
-  window.open("https://wa.me/?text=Wedding%20Invitation%20Arvind%20Weds%20Monika%20%0Ahttps://prmusaini6565.github.io/arvind-monika-wedding/","_blank");
+  window.open(
+    "https://wa.me/?text=Wedding%20Invitation%20Arvind%20Weds%20Monika%0Ahttps://prmusaini6565.github.io/arvind-monika-wedding/",
+    "_blank"
+  );
 }
 new QRCode(document.getElementById("qrcode"),{
   text:"https://prmusaini6565.github.io/arvind-monika-wedding/",
@@ -217,4 +228,3 @@ new QRCode(document.getElementById("qrcode"),{
 
 </body>
 </html>
-
