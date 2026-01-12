@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation | Arvind Weds Monika</title>
+
+<!-- Fancy Wedding Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:'Cinzel', serif;
+    background:linear-gradient(to bottom,#fff1f2,#fde2e4);
+    color:#6b1b1b;
+    text-align:center;
+}
+.container{
+    padding:30px 15px;
+}
+h1{
+    font-family:'Dancing Script', cursive;
+    font-size:42px;
+    margin-bottom:6px;
+}
+h2{
+    font-size:26px;
+    margin:10px 0;
+}
+.heart-weds{
+    position:relative;
+    display:inline-block;
+    color:#d81b60;
+    font-size:34px;
+    margin:0 8px;
+}
+.weds-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-55%);
+    font-size:10px;
+    font-weight:bold;
+    color:#fff;
+}
+.date{
+    font-weight:bold;
+    margin-top:6px;
+    font-size:18px;
+}
+
+/* Romantic Quote */
+.quote{
+    margin:18px auto 10px;
+    font-size:18px;
+    font-style:italic;
+    max-width:500px;
+    line-height:1.5;
+}
+
+/* Sections */
+.section{
+    background:#ffffff;
+    max-width:520px;
+    margin:20px auto;
+    padding:22px;
+    border-radius:18px;
+    box-shadow:0 8px 22px rgba(0,0,0,0.12);
+}
+.section h3{
+    margin-top:0;
+}
+.event{
+    margin:12px 0;
+    font-size:16px;
+    line-height:1.4;
+}
+.countdown{
+    font-size:18px;
+    font-weight:bold;
+    color:#8b0000;
+}
+button{
+    background:#8b0000;
+    color:#fff;
+    border:none;
+    padding:12px 24px;
+    border-radius:30px;
+    font-size:15px;
+    cursor:pointer;
+}
+button:hover{
+    background:#5b0000;
+}
+.footer{
+    margin-top:25px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_f8bfa82c9c.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<h1>🌸 Wedding Invitation 🌸</h1>
+
+<h2>
+Arvind
+<span class="heart-weds">❤<span class="weds-text">WEDS</span></span>
+Monika
+</h2>
+
+<div class="date">13 February 2026</div>
+
+<div class="quote">
+“Two hearts, one journey,<br>
+a lifetime together”
+</div>
+
+<!-- Countdown -->
+<div class="section">
+<h3>⏳ Wedding Countdown</h3>
+<div id="countdown" class="countdown"></div>
+</div>
+
+<!-- Venue -->
+<div class="section">
+<h3>📍 Venue</h3>
+<p><b>Mandawa, Jhunjhunu</b></p>
+<button onclick="openMap()">Open in Google Maps</button>
+</div>
+
+<!-- Events -->
+<div class="section">
+<h3>✨ Wedding Events ✨</h3>
+
+<div class="event">🟡 <b>Haldi</b><br>11 Feb 2026 – 9:15 AM</div>
+<div class="event">🟣 <b>Tilak</b><br>11 Feb 2026 – 11:15 AM</div>
+<div class="event">🍽️ <b>Partibhoj</b><br>11 Feb 2026 – 7:15 PM</div>
+<div class="event">🎶 <b>Sangeet</b><br>12 Feb 2026 – 7:15 PM</div>
+<div class="event">💍 <b>Subh Vivah</b><br>13 Feb 2026 – Subh Mahurat Anusar</div>
+
+</div>
+
+<!-- Invitation Message -->
+<div class="section">
+<h3>🙏 Nimantran Sandesh 🙏</h3>
+<p>
+Aap sabhi ko parivaar ke saath<br>
+<b>Arvind & Monika</b> ke<br>
+vivah samaroh me padharne ka<br>
+hardik nimantran hai.
+</p>
+</div>
+
+<div class="footer">
+With Love ❤️<br>
+<b>Samast Mitawa Parivaar</b>
+</div>
+
+</div>
+
+<script>
+const weddingDate = new Date("Feb 13, 2026 00:00:00").getTime();
+
+setInterval(() => {
+  const now = new Date().getTime();
+  const diff = weddingDate - now;
+
+  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML =
+    d + " Days " + h + " Hours " + m + " Minutes " + s + " Seconds";
+}, 1000);
+
+function openMap(){
+  window.open("https://www.google.com/maps/search/Mandawa+Jhunjhunu", "_blank");
+}
+</script>
+
+</body>
+</html>
