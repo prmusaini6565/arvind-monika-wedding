@@ -6,12 +6,11 @@
 
 <title>Wedding Invitation | Arvind Weds Monika</title>
 
-<!-- WhatsApp / Facebook Preview -->
+<!-- Social Share Preview -->
 <meta property="og:title" content="Wedding Invitation | Arvind Weds Monika">
-<meta property="og:description" content="We joyfully invite you to celebrate the wedding of Arvind & Monika on 13 February 2026 at Mandawa, Jhunjhunu.">
+<meta property="og:description" content="With great pleasure, we invite you to the wedding of Arvind & Monika on 13 February 2026 at Mandawa, Jhunjhunu.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://prmusaini6565.github.io/arvind-monika-wedding/">
-<meta property="og:image" content="wedding-cover.png">
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
@@ -29,7 +28,7 @@ body{
     overflow-x:hidden;
 }
 
-/* Flower animation */
+/* 🌸 Flower Animation */
 .flower{
     position:fixed;
     top:-40px;
@@ -41,7 +40,7 @@ body{
     to{ transform:translateY(110vh) rotate(360deg); opacity:0; }
 }
 
-/* Card */
+/* Card Layout */
 .container{
     padding:32px 18px;
     max-width:720px;
@@ -54,47 +53,57 @@ body{
     z-index:5;
 }
 
-/* Cover Illustration */
+/* Cover Image */
 .cover-art{
     position:relative;
-    margin-bottom:24px;
+    margin-bottom:26px;
 }
 .cover-art img{
     width:100%;
     border-radius:22px;
     border:2px solid #e0b973;
 }
-.cover-text{
+
+/* Overlay Text */
+.cover-overlay{
     position:absolute;
-    bottom:20px;
-    left:0;
-    right:0;
-    text-align:center;
+    top:0; left:0; right:0; bottom:0;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top:18%;
 }
-.cover-names{
-    background:rgba(255,255,255,0.9);
-    display:inline-block;
-    padding:12px 24px;
-    border-radius:30px;
-    font-size:24px;
-    font-weight:bold;
+.overlay-circle{
+    background:rgba(255,245,235,0.92);
+    border:2px solid #e0b973;
+    border-radius:50%;
+    padding:26px 36px;
+    box-shadow:0 0 28px rgba(224,185,115,0.85);
 }
-.cover-names span{
-    color:#c2185b;
+.overlay-names{
+    font-family:'Dancing Script', cursive;
+    font-size:32px;
+    color:#6b1b1b;
+    line-height:1.3;
+}
+.overlay-names span{
+    display:block;
+    font-family:'Cinzel', serif;
     font-size:14px;
-    margin:0 6px;
+    color:#c2185b;
+    letter-spacing:2px;
+    margin:6px 0;
 }
 
-/* Header */
-.ganesha{ font-size:20px; margin-bottom:6px; }
+/* Text */
+.ganesha{ font-size:20px; margin:10px 0 4px; }
 .invite-line{ font-size:15px; letter-spacing:1px; }
 
 h1{
     font-family:'Dancing Script', cursive;
     font-size:44px;
+    margin:12px 0;
 }
-h2{ font-size:26px; }
-
 .date{ font-weight:bold; font-size:18px; }
 .quote{
     margin:18px auto;
@@ -124,10 +133,7 @@ button{
     cursor:pointer;
 }
 button:hover{ background:#5b0000; }
-
-.whatsapp{
-    background:#25D366;
-}
+.whatsapp{ background:#25D366; }
 
 .footer{ margin-top:28px; font-size:14px; }
 </style>
@@ -135,9 +141,9 @@ button:hover{ background:#5b0000; }
 
 <body>
 
-<!-- 🌸 Flower Animation -->
+<!-- 🌸 Flowers -->
 <script>
-for(let i=0;i<30;i++){
+for(let i=0;i<28;i++){
   let f=document.createElement("div");
   f.className="flower";
   f.innerHTML="🌸";
@@ -147,26 +153,29 @@ for(let i=0;i<30;i++){
 }
 </script>
 
-<!-- Background Music -->
+<!-- Music -->
 <audio autoplay loop>
   <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_f8bfa82c9c.mp3" type="audio/mpeg">
 </audio>
 
 <div class="container">
 
-<!-- 🎨 Illustrated Wedding Cover -->
+<!-- Royal Cover -->
 <div class="cover-art">
-  <!-- Upload your illustration image in repo as: wedding-cover.png -->
-  <img src="wedding-cover.png" alt="Wedding Illustration">
-  <div class="cover-text">
-    <div class="cover-names">
-      Arvind <span>WEDS</span> Monika
+  <img src="An-Traditional-Indian-Wedding-Card-Fit-For-Royalty-With-Palaces-Archways-Lotus-And-Richly-Dressed-Bride-And-Groom-min-600x900.png" alt="Wedding Illustration">
+  <div class="cover-overlay">
+    <div class="overlay-circle">
+      <div class="overlay-names">
+        Arvind
+        <span>WEDS</span>
+        Monika
+      </div>
     </div>
   </div>
 </div>
 
 <div class="ganesha">ॐ श्री गणेशाय नमः</div>
-<div class="invite-line">With the blessings of our families</div>
+<div class="invite-line">WITH THE BLESSINGS OF OUR FAMILIES</div>
 
 <h1>Wedding Invitation</h1>
 
