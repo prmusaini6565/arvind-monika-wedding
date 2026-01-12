@@ -6,12 +6,16 @@
 
 <title>Wedding Invitation | Arvind Weds Monika</title>
 
+<!-- Social Preview -->
 <meta property="og:title" content="Wedding Invitation | Arvind Weds Monika">
 <meta property="og:description" content="With great pleasure, we invite you to the wedding of Arvind & Monika on 13 February 2026 at Mandawa, Jhunjhunu.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://prmusaini6565.github.io/arvind-monika-wedding/">
 
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- QR -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 <style>
@@ -24,7 +28,7 @@ body{
     overflow-x:hidden;
 }
 
-/* Flower Animation */
+/* 🌸 Flowers */
 .flower{
     position:fixed;
     top:-40px;
@@ -60,22 +64,23 @@ body{
     border:2px solid #e0b973;
 }
 
-/* ✅ FIXED Overlay (Moved to Top) */
+/* ✅ FACE SAFE OVERLAY */
 .cover-overlay{
     position:absolute;
-    top:20px;
+    top:5%;              /* percentage = device safe */
     left:0;
     right:0;
     display:flex;
     justify-content:center;
+    z-index:5;
     pointer-events:none;
 }
 
 .overlay-circle{
-    background:rgba(255,245,235,0.94);
+    background:rgba(255,245,235,0.95);
     border:2px solid #e0b973;
     border-radius:50%;
-    padding:18px 28px;
+    padding:18px 26px;
     box-shadow:0 0 22px rgba(224,185,115,0.85);
 }
 
@@ -83,6 +88,7 @@ body{
     font-family:'Dancing Script', cursive;
     font-size:30px;
     line-height:1.2;
+    color:#6b1b1b;
 }
 .overlay-names span{
     display:block;
@@ -136,16 +142,18 @@ button:hover{ background:#5b0000; }
 
 .footer{ margin-top:28px; font-size:14px; }
 
-/* 📱 Mobile Fix */
-@media(max-width:600px){
-  .overlay-names{ font-size:26px; }
-  .overlay-circle{ padding:16px 24px; }
+/* 📱 EXTRA MOBILE FIX (Vivo, Samsung, Redmi) */
+@media(max-width:480px){
+  .cover-overlay{ top:-2%; }
+  .overlay-circle{ padding:14px 22px; }
+  .overlay-names{ font-size:24px; }
 }
 </style>
 </head>
 
 <body>
 
+<!-- Flowers -->
 <script>
 for(let i=0;i<28;i++){
   let f=document.createElement("div");
@@ -157,12 +165,14 @@ for(let i=0;i<28;i++){
 }
 </script>
 
+<!-- Music -->
 <audio autoplay loop>
   <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_f8bfa82c9c.mp3" type="audio/mpeg">
 </audio>
 
 <div class="container">
 
+<!-- Cover -->
 <div class="cover-art">
   <img src="wedding.png" alt="Wedding Illustration">
   <div class="cover-overlay">
@@ -183,7 +193,8 @@ for(let i=0;i<28;i++){
 <div class="date">13 February 2026</div>
 
 <div class="quote">
-“Two hearts, one journey,<br>a lifetime together”
+“Two hearts, one journey,<br>
+a lifetime together”
 </div>
 
 <div class="section">
